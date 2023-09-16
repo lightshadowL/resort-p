@@ -12,7 +12,7 @@
         <meta property="og:image" content="./images/logo-color.png">
         <meta property="og:url" content="사이트 주소">
         <title>기본작성입니다.</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css" integrity="sha512-3PN6gfRNZEX4YFyz+sIyTF6pGlQiryJu9NlGhu9LrLMQ7eDjNgudQoFDK3WSNAayeIKc6B8WXXpo4a7HqxjKwg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="./images/favicon.png">
         <link href="./css/common.css " rel="stylesheet" type="text/css">
         <script src="./js/jquery-3.6.0.min.js"></script>
@@ -33,7 +33,78 @@
   <body>
     <main>
        <header>
-            모바일과 데스크탑 헤더 그룹
+            <!-- 모바일과 데스크탑 헤더 그룹 -->
+            <div class="header-container">
+                <div class="m-header">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <img src="./images/logo-white.png" alt="tower palace result">
+                        </a>
+                    </h1>
+                    <nav id="m-nav">
+                        <button class="open-side">
+                            <i class='fas fa-bars'></i>
+                        </button>
+                        <!-- 사이드 콘텐트 -->
+                        <div class="side-content">
+                            <div class="side-container">
+                                <button class="close-side">X</button>
+                                <div class="side-gnb-top">
+                                    <a href="#"><img src="./images/position.png"><span>지도</span></a>
+                                    <a href="#"><img src="./images/login.png"><span>로그인</span></a>
+                                    <a href="#"><img src="./images/search.png"><span>검색</span></a>
+                                    <a href="#"><span>KOR</span></a>
+                                </div>
+                                <div class="side-gnb-middle">
+                                    <a href="main.html">홈</a> |
+                                    <a href="#">워터월드</a> |
+                                    <a href="#">스키</a> |
+                                    <a href="#">골프</a> |
+                                    <a href="#">카지노</a> 
+                                </div>
+                                <ul class="side-list">
+                                    <li>
+                                        <span>Tower 소개<i class="fas fa-angle-right"></i></span>
+                                        <div class="m-drop-list">
+                                            <a href="#">Tower 소개</a>
+                                            <a href="#">오시는 길</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>객실<i class="fas fa-angle-right"></i></span>
+                                        <div class="m-drop-list">
+                                            <a href="room.html">Room A</a>
+                                            <a href="room.html">Room B</a>
+                                            <a href="room.html">Room C</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>식음업장<i class="fas fa-angle-right"></i></span>
+                                    </li>
+                                    <li>
+                                        <span>부대시설<i class="fas fa-angle-right"></i></span>
+                                    </li>
+                                    <li>
+                                        <span>컨벤션<i class="fas fa-angle-right"></i></span>
+                                    </li>
+                                    <li>
+                                        <span>이용안내<i class="fas fa-angle-right"></i></span>
+                                    </li>
+                                    <li>
+                                        <span>여행지<i class="fas fa-angle-right"></i></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </nav>
+                </div>
+                <!-- 데스크 헤더 -->
+                <div class="desk-header">
+                    <!-- desk-top -->
+                    데스크탑 헤더
+                </div>
+            </div>
        </header>
        <section class="section-container">
             콘텐츠 본문 구역  
