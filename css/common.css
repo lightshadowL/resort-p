@@ -151,6 +151,8 @@ h1.logo img{
     display:flex;
     justify-content: space-between;
     font-weight:700;
+    /* 수정 */
+    padding:10px 0;
 }
 .m-drop-list{
     width:100%;
