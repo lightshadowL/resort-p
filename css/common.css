@@ -212,6 +212,154 @@ header{
 
 @media screen and (min-width:1024px){
     /* 1024px에서 부터 css */
+
+    /* 데스크 헤더 */
+    .m-header{
+        display:none;
+    }
+    .header-container{
+        max-width:100%;
+    }
+    .desk-header{
+        display:block;
+    }
+    .desk-top{
+        background-color:rgba(255,255,255,0.5);
+        
+    }
+    .desk-top-container{
+        max-width:1440px;
+        margin:auto;
+        display:flex;
+        padding:30px 50px;
+        justify-content: space-between;
+    }
+    .desk-top-left{
+        display:flex;
+        width:300px;
+        justify-content: space-around;
+    }
+    .desk-top-left a{
+        font-weight:700;
+    }
+    .desk-top-right{
+        display:flex;
+        width:300px;
+        justify-content: space-around;
+    }
+    .desk-top-right a{
+        font-weight:700;
+    }
+    .desk-top-right img{
+        width:25%
+    }
+    .desk-bottom{
+        width:100%;
+        
+        background-color:rgba(0,0,0,0.5)
+    }
+    .desk-bottom-container{
+        max-width:1440px;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        padding:5px 50px;
+        position:relative;
+        
+    }
+    .desk-bottom-container h1{
+        width:80px;
+    }
+    .desk-bottom-container h1 img{
+        width:100%;
+    }
+    .desk-bottom-container>.desk-list{
+        width:80%;
+        display:flex;
+        align-items: center;
+    }
+    .desk-bottom-container>.desk-list>ul{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        list-style:none;
+        align-items:center;
+    }
+    .desk-bottom-container>.desk-list>ul>li{
+        width:16.6%;
+        text-align:center;
+    }
+    .desk-bottom-container>.desk-list>ul>li>a{
+        display:flex;
+        width:100%;
+        height:50px;
+        color:white;
+        text-shadow:1px 1px 0 black;
+        justify-content: center;
+        align-items: center;
+        font-size:1.2em
+        
+    }
+    /* .desk-bottom-container>ul>li>a:hover{
+        background-color:#834646;
+    } */
+    .desk-bottom-container>.desk-list>ul>li>a.active{
+        background-color:#834646;
+    }
+    .desk-full-drop{
+        width:100%;
+        position:absolute;
+        left:0;
+        top:62px;
+        /* display:none; */
+        height:200px;
+        height:0;
+        overflow:hidden;
+        transition:0.5s;
+    }
+    /* hover 효과 */
+    .desk-list>ul>li>a:hover{
+        background-color:black;
+    }
+    .desk-list:hover .desk-full-drop{
+        height:200px;
+    }
+    .desk-full-drop-container{ 
+        width:100%;
+        background-color:rgba(255,255,255,0.8);
+        /* background:red; */
+        display:flex;
+        justify-content:space-between;
+        padding:0px 50px;
+    }
+    
+    .blank-ele{
+        width:150px;
+    }
+    .full-drop-list{
+        width:80%;
+        display:flex;
+        justify-content:space-around;
+    }
+    .full-drop-list>div{
+        width:16.6%;
+        text-align:center;
+        padding:20px 0;
+        
+    }
+    
+    .full-drop-list>div>a{
+        display:flex;
+        width:100%;
+        height:50px;
+        color:black;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .full-drop-list>div.active{
+        background-color:#ddd;
+    }
     
 }
 @media screen and (min-width:1280px){
