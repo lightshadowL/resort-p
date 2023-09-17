@@ -210,13 +210,22 @@ header{
 .slider-container{
     width:100%;
     position:relative;
+    overflow:auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.slider-container::-webkit-scrollbar{
+    display:none;
 }
 .slides{
-    width:100%;
+    width:400%;
     position:relative;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .slide{
-    width:100%;
+    width:25%;
     position:relative;
 }
 .slide picture{
@@ -232,7 +241,7 @@ header{
     max-width:500px;
     background-color:rgba(255,255,255,0.5);
     top:50%;
-    right:2%;
+    right:5%;
     transform:translate(0, -40%);
     padding:5% 15px;
     font-size:5vw;
@@ -260,6 +269,52 @@ header{
 .color3{
     font-size:1.3em;
     font-weight: bold;
+}
+.control{
+    position:absolute;
+    z-index:99;
+    width:20px;
+    height:60px;
+    top:50%;
+    transform:translate(0, -50%);
+    background-color:rgba(0,0,0,0.5);
+    /* text-indent: -9999px;
+    background-repeat:no-repeat;
+    background-size:50%;
+    background-position:center; */
+    border:none;
+    cursor: pointer;
+    font-size:1.5rem;
+}
+.control.btactive{
+    background-color:white;
+}
+.prevbt{
+    left:10px;
+    /* background-image:url(../images/arrow-left.png); */
+}
+.nextbt{
+    right:10px;
+    /* background-image:url(../images/arrow-right.png); */
+}
+.pagenation{
+    display:flex;
+    justify-content: center;
+    position:relative;
+    width:100%;
+    margin-top:10px;
+}
+.dot{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:#ddd;
+    text-indent:-999px;
+    border-radius: 50%;
+    margin:0 3px;
+}
+.dot.active{
+    background-color:orange;
 }
 
 /* 예약 메뉴 */
