@@ -238,6 +238,70 @@ $(document).ready(function(){
             
         })
 
+        // //////////////////////////////////////////////////////////////////////////////////
+        // 마우스다운 터치스타트
+        $slides.on("mousedown touchstart",(event)=>{
+            console.log("마우스버튼을 누르고 있어요")
+            if(event.type=="touchstart"){
+                x_pos=event.touches[0].screenX;
+            }else{
+                x_pos=event.pageX;
+            }
+            // x_pos=event.pageX;
+            drag=true;
+            timeCount=setInterval(function(){ $time++; console.log($time) },10);
+            // return false;
+        })
+
+        // ///////////////////////////////////////////////////////////////////////////////
+        // 마우스업, 터치끝
+        $slides.on("mouseup touchend",(event)=>{
+            var transhold=50;
+            console.log("마우스 버튼을 떼었어요");
+            drag=false;
+            console.log("xDif : "+xDif)
+            if(Math.abs(xDif)>transhold){
+                
+                if(xDif<-50){
+                    prevPlay(); 
+                }else if(xDif>50){
+                    nextPlay();
+                }
+            }
+            xDif=0;
+            clearInterval(timeCount);
+            if($time>10){
+                $(".slides a").click(function(){
+                    return false;
+                })
+                console.log("이벤트 제거")
+                }else{
+                    $(".slides a").click(function(){
+                        console.log("이벤트 설정");
+                        var $href=$(this).attr("href");
+                        window.open($href,"_self");
+                    })
+                    
+                }
+            $time=0;
+               
+        })
+
+        // ///////////////////////////////////////////////////////////////////////////////
+        // 마우스무브, 터치무브
+        $slides.on("mousemove touchmove",(event)=>{
+            if(drag){
+                console.log("X : "+x);
+                console.log("마우스를 드레그 하고 있어요");
+                if(event.type=="touchmove"){
+                    xDif=parseInt((x_pos-event.touches[0].screenX));
+                }else{
+                    xDif=parseInt((x_pos-event.pageX));
+                } 
+            }
+            return false;
+        })// mousemove, touchmove 끝        
+
     }
     slideEvent();
     
@@ -250,5 +314,6 @@ $(document).ready(function(){
             left:-swidth*slidePosition
         },0);
     }); // 창 재설정 끝
+
 
 })

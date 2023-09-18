@@ -316,6 +316,9 @@ header{
 .dot.active{
     background-color:orange;
 }
+.slides a.link{
+    pointer-events: none;
+}
 
 /* 예약 메뉴 */
 .rese{
