@@ -331,6 +331,94 @@ header{
     padding:10px;
 }
 
+.rese>.box{
+    width:50%;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-bottom:1px solid #ddd;
+ 
+}
+.rese>.button-rese{
+    width:100%;
+    background-color:#730E50;
+}
+.box>div{
+    width:100%;
+    height:100%;
+    height:70px;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction:column;
+    border-right:1px solid #ddd;
+    font-size:0.8em;
+    padding:0 10px;
+}
+.box>div>h4{
+    margin:5px 0;
+    color:rgb(212, 35, 35);
+}
+.box:nth-child(even)>div{
+    border:none;
+}
+.box:last-child>div{
+    border:none;
+}
+.rese>.box:nth-child(3),
+.rese>.box:nth-child(4){
+    border-bottom:none;
+}
+.box:first-child>div{
+    align-items:center;
+    font-size:1.3em;
+    font-weight: 900;
+}
+.location-rese .select{
+    font-size:0.9em;
+    border:none;
+    width:100%;
+    font-weight:700;
+    color:#474747;
+    margin-left:-5px;
+    background-color:white;
+}
+
+.date-wrap{
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+.date-wrap span{
+    width:50%;
+}
+.date-wrap span:last-child{
+    width:30px;
+}
+.date-wrap img{
+    width:100%;
+}
+.date-wrap input[name=start],
+.date-wrap input[name=end]{
+    width:60%;
+    outline:none;
+}
+.button-rese div a{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:white;
+    font-size:1.5em;
+}
+.button-rese div a img{
+    height:80%;
+}
+.button-rese div a span{
+    font-size:2em;
+    margin-left:5px;
+}
+
 /* ******************************************** */
 
 /* footer */
@@ -354,6 +442,28 @@ header{
     }
     .slide-text p:first-child{
         font-size:2.2rem;
+    }
+
+    /* 예약 */
+    .rese{
+        background-color:transparent;
+        justify-content: center;
+        max-width:1440px;
+    }
+    .rese>.box{
+        width:25%;
+        border:none;
+        background-color:white;
+    }
+    .rese>.box:last-child{
+        background-color:#730E50;
+        width:50%;
+    }
+    .box>div{
+        border-bottom:none;
+    }
+    .box:nth-child(2)>div{
+        border-right:1px dashed #ddd
     }
 
 }
@@ -514,6 +624,23 @@ header{
     .slide-text{
         font-size:2rem;
         transform:translate(0, -30%)
+    }
+
+    /* 예약 */
+    .rese{
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translate(-50%, 50%)
+    }
+    .rese>.box{
+        width:19%;
+    }
+    .rese>.box:last-child{
+        width:22%;
+        position:relative;
+        transform:scale(1.2);
+        left:30px;  
     }
 }
 @media screen and (min-width:1280px){

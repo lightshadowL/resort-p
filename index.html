@@ -16,6 +16,11 @@
         <link rel="shortcut icon" href="./images/favicon.png">
         <link href="./css/common.css " rel="stylesheet" type="text/css">
         <script src="./js/jquery-3.6.0.min.js"></script>
+        <!-- 달력 -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <!-- /달력 -->
         <script src="./js/common.js"></script>
         <style>
             /* 디자인 구역 현재 페이지에만 디자인 적용됨 */
@@ -28,6 +33,7 @@
             $(document).ready(function(){
                 
             });
+            
         </script>
   </head>
   <body>
@@ -253,7 +259,162 @@
                     </div>
                 </div>
                 <div class="rese">
-                 <a href="http://www.naver.com">예약  </a> 
+                    <div class="shortcut-rese box">
+                        <div>
+                            <a href="#">바로 예약하기</a>
+                        </div>
+                    </div>
+                    <div class="location-rese box">
+                        <div>
+                            <h4>예약장소</h4>
+                            <select class="select">
+                                <option value="">예약장소 선택하기</option>
+                                <option value="r1">예약장소1</option>
+                                <option value="r2">예약장소2</option>
+                                <option value="r3">예약장소3</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="check-in box">
+                        <div>
+                            <h4>체크인</h4>
+                            <div class="date-wrap">
+                                <input type="text" name="start" value="" />
+                                <script>
+                                $(function() {
+                                    var $today=new Date()
+                                    var $year,$month,$date;
+                                    $year=$today.getFullYear();
+                                    $month=$today.getMonth()+1;
+                                    $date=$today.getDate();
+                                    // $(".date").text($year+"-"+(("00"+$month.toString()).slice(-2))+"-"+(("00"+$date.toString()).slice(-2)))
+                                    console.log($year+"-"+(("00"+$month.toString()).slice(-2))+"-"+(("00"+$date.toString()).slice(-2)))
+                                    $("input[start]").val($year+"-"+(("00"+$month.toString()).slice(-2))+"-"+(("00"+$date.toString()).slice(-2)))
+                                    $('input[name="start"]').daterangepicker({
+                                        singleDatePicker: true,
+                                        showDropdowns: true,
+                                        "minYear": 1000,
+                                        "maxYear": 9999,
+                                        "locale": {
+                                        "format": 'YYYY-MM-DD',
+                                        "separator": " ~ ",
+                                        "applyLabel": "확인",
+                                            "cancelLabel": "취소",
+                                            "fromLabel": "From",
+                                            "toLabel": "To",
+                                            "customRangeLabel": "Custom",
+                                            "weekLabel": "주",
+                                            "daysOfWeek": [
+                                                "일",
+                                                "월",
+                                                "화",
+                                                "수",
+                                                "목",
+                                                "금",
+                                                "토"
+                                        ],
+                                        "monthNames": [
+                                                "1월",
+                                                "2월",
+                                                "3월",
+                                                "4월",
+                                                "5월",
+                                                "6월",
+                                                "7월",
+                                                "8월",
+                                                "9월",
+                                                "10월",
+                                                "11월",
+                                                "12월"
+                                            ],
+                                            "firstDay": 1
+                                        },
+                                
+                                    });
+                                });
+                                </script>                               
+                                <span class="icon-img">
+                                    <img src="./images/time.png" alt="time">
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="check-out box">
+                        <div>
+                            <h4>체크아웃</h4>
+                            <div class="date-wrap">
+                                <input type="text" name="end" value="" />
+                                <script>
+                                    $(function() {
+                                        var $today=new Date()
+                                        var $year,$month,$date;
+                                        $year=$today.getFullYear();
+                                        $month=$today.getMonth()+1;
+                                        $date=$today.getDate();
+                                        // $(".date").text($year+"-"+(("00"+$month.toString()).slice(-2))+"-"+(("00"+$date.toString()).slice(-2)))
+                                        console.log($year+"-"+(("00"+$month.toString()).slice(-2))+"-"+(("00"+$date.toString()).slice(-2)))
+                                        $("input[end]").val($year+"-"+(("00"+$month.toString()).slice(-2))+"-"+(("00"+$date.toString()).slice(-2)))
+                                        $('input[name="end"]').daterangepicker({
+                                            singleDatePicker: true,
+                                            showDropdowns: true,
+                                            "minYear": 1000,
+                                            "maxYear": 9999,
+                                            "locale": {
+                                            "format": 'YYYY-MM-DD',
+                                            "separator": " ~ ",
+                                            "applyLabel": "확인",
+                                                "cancelLabel": "취소",
+                                                "fromLabel": "From",
+                                                "toLabel": "To",
+                                                "customRangeLabel": "Custom",
+                                                "weekLabel": "주",
+                                                "daysOfWeek": [
+                                                    "일",
+                                                    "월",
+                                                    "화",
+                                                    "수",
+                                                    "목",
+                                                    "금",
+                                                    "토"
+                                            ],
+                                            "monthNames": [
+                                                    "1월",
+                                                    "2월",
+                                                    "3월",
+                                                    "4월",
+                                                    "5월",
+                                                    "6월",
+                                                    "7월",
+                                                    "8월",
+                                                    "9월",
+                                                    "10월",
+                                                    "11월",
+                                                    "12월"
+                                                ],
+                                                "firstDay": 1
+                                            },
+                                    
+                                        });
+                                    });
+                                </script>
+                                <span class="icon-img">
+                                    <img src="./images/time.png" alt="time">
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="button-rese box">
+                        <div>
+                            <a href="#">
+                                <img src="./images/calender.png" alt="예약">
+                                <span>예약</span>
+                            </a>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </section>
