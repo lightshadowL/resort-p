@@ -419,6 +419,102 @@ header{
     margin-left:5px;
 }
 
+/* 이벤트/패키지 */
+.contents2{
+    padding:50px 0 0;
+}
+.contents2 h2{
+    text-align:center; 
+    margin:5px 0;   
+}
+.weekend-group,
+.weekday,
+.winter{
+    width:90%;
+    padding:2%;
+    box-shadow:0 0 3px #666;
+    margin:30px auto;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.weekend-group>div,
+.weekday>div,
+.winter>div{
+    width:70%;
+    border-bottom:1px solid rgb(164, 163, 163);
+    padding:10% 0;
+}
+.weekend-group>div:last-child,
+.weekday>div:last-child,
+.winter>div:last-child{
+    border:none;
+}
+.weekend-group img,
+.weekday img,
+.winter img{
+    width:100%;
+}
+.weekend-tit h3,
+.weekday-tit h3,
+.winter h3{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:7vw;
+}
+.weekend-tit .title1,
+.weekday-tit .title1,
+.winter-tit .title1{
+    color:rgb(166, 128, 32);
+
+}
+.weekend-tit .title2{
+    color:rgb(13, 121, 13);
+}
+.weekday-tit .title2{
+    color:purple;
+}
+.winter-tit .title2{
+    color:gold;
+}
+.weekend-p,
+.weekday-p,
+.winter-p{
+    font-size:2.5vw;
+}
+.weekend-p p:nth-of-type(1),
+.weekday-p p:nth-of-type(1),
+.winter-p p:nth-of-type(1){
+    text-indent:20px;
+}
+.weekend-p p:nth-of-type(2),
+.weekday-p p:nth-of-type(2),
+.winter-p p:nth-of-type(2){
+    text-indent:40px;
+}
+.weekend-p p:nth-of-type(3),
+.weekday-p p:nth-of-type(3),
+.winter-p p:nth-of-type(3){
+    text-indent:60px;
+}
+
+button.more,
+button.folding{
+    display:block;
+    width:30%;
+    height:40px;
+    max-width:150px;
+    background-color:#e18e11;
+    border:none;
+    color:white;
+    border-radius:10px;
+    margin:auto;
+    margin-bottom:30px;
+}
 /* ******************************************** */
 
 /* footer */
@@ -464,6 +560,38 @@ header{
     }
     .box:nth-child(2)>div{
         border-right:1px dashed #ddd
+    }
+
+    /* 이벤트    */
+    .weekend-group,
+    .weekday,
+    .winter{
+        flex-wrap:wrap;
+        flex-direction: row;
+    }
+    .weekend-group>div,
+    .weekday>div,
+    .winter>div{
+        width:50%;
+        padding:30px ;
+        border:none;
+    }
+    .weekend-group>div:first-child,
+    .weekday>div:first-child,
+    .winter>div:first-child{
+        border-right:1px solid #ccc;
+    }
+    .weekend-tit h3,
+    .weekday-tit h3,
+    .winter-tit h3{
+        font-size:5vw;
+    }
+    .weekend-group>div:last-child,
+    .weekday>div:last-child,
+    .winter>div:last-child{
+        width:100%;
+        padding:30px;
+        border-top:1px solid #ccc;
     }
 
 }
@@ -641,6 +769,42 @@ header{
         position:relative;
         transform:scale(1.2);
         left:30px;  
+    }
+
+    /* 이벤트 */
+    .contents2{
+        margin-top:50px;
+    }
+    .weekend-group,
+    .weekday,
+    .winter{
+        width:80%;
+        max-width:1440px;
+        margin:40px auto;
+    }
+    .weekend-group>div,
+    .weekday>div,
+    .winter>div{
+        width:33.33%;
+        border-right:1px solid #ccc;
+    }
+    
+    .weekend-group>div:first-child,
+    .weekday>div:first-child,
+    .winter>div:first-child{
+        border-right:1px solid #ccc;
+    }
+    .weekend-tit h3,
+    .weekday-tit h3,
+    .winter-tit h3{
+        font-size:1.6em;
+    }
+    .weekend-group>div:last-child,
+    .weekday>div:last-child,
+    .winter>div:last-child{
+        width:33.33%;
+        border-top:none;
+        font-size:0.7em;
     }
 }
 @media screen and (min-width:1280px){
